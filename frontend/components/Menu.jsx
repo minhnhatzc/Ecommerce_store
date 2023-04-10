@@ -16,34 +16,34 @@ const subMenuData = [
   { id: 4, name: "Football shoes", doc_count: 107 },
 ];
 
-function Menu({showCatMenu, setShowCatMenu}) {
+function Menu({ showCatMenu, setShowCatMenu }) {
   return (
     <ul className="items-center hidden gap-8 font-medium text-black md:flex">
       {data.map((item) => {
         return (
           <React.Fragment key={item.id}>
             {!!item?.subMenu ? (
-              <li className="relative flex items-center gap-2 cursor-pointer"
-               onMouseEnter={()=> setShowCatMenu(true)}
-               onMouseLeave={()=> setShowCatMenu(false)}
+              <li
+                className="relative flex items-center gap-2 cursor-pointer"
+                onMouseEnter={() => setShowCatMenu(true)}
+                onMouseLeave={() => setShowCatMenu(false)}
               >
-               {item.name}
-               <BsChevronDown size={14}/>
-               {showCatMenu && (
-                    <ul className="bg-white absolute top-6 left-0 min-w-[250px] px-1 py-1 text-black shadow-lg">
-                         {subMenuData.map((submenu) => {
-                              return (
-                                   <Link key={submenu.id} href="/">
-                                   <li className="h-12 flex justify-between items-center px-3 hover:bg-black/[0.03] rounded-md">
-                                   {submenu.name}
-                                   <span className="text-sm opacity-50">88</span>
-                                   </li>
-                                   </Link>
-
-                              )
-                         })}
-                    </ul>
-               )}
+                {item.name}
+                <BsChevronDown size={14} />
+                {showCatMenu && (
+                  <ul className="bg-white absolute top-6 left-0 min-w-[250px] px-1 py-1 text-black shadow-lg">
+                    {subMenuData.map((submenu) => {
+                      return (
+                        <Link key={submenu.id} href="/">
+                          <li className="h-12 flex justify-between items-center px-3 hover:bg-black/[0.03] rounded-md">
+                            {submenu.name}
+                            <span className="text-sm opacity-50">88</span>
+                          </li>
+                        </Link>
+                      );
+                    })}
+                  </ul>
+                )}
               </li>
             ) : (
               <li className="cursor_pointer">

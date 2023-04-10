@@ -13,21 +13,21 @@ function HeroBanner() {
         showIndicators={false}
         showStatus={false}
         renderArrowPrev={(clickHandler, hasPrev) => (
-          <div onClick={clickHandler}
-          className="absolute right-[31px] md:right-[51px] bottom-0 w-[30px] md:w-[50px] h-[30px] md:h-[50px] bg-black z-10 flex items-center justify-center cursor-pointer hover:opacity-90"
+          <div
+            onClick={clickHandler}
+            className="absolute right-[31px] md:right-[51px] bottom-0 w-[30px] md:w-[50px] h-[30px] md:h-[50px] bg-black z-10 flex items-center justify-center cursor-pointer hover:opacity-90"
           >
-          <BiArrowBack className="text-sm md:text-lg" />
+            <BiArrowBack className="text-sm md:text-lg" />
           </div>
         )}
-
         renderArrowNext={(clickHandler, hasNext) => (
           <div
-              onClick={clickHandler}
-              className="absolute right-0 bottom-0 w-[30px] md:w-[50px] h-[30px] md:h-[50px] bg-black z-10 flex items-center justify-center cursor-pointer hover:opacity-90"
+            onClick={clickHandler}
+            className="absolute right-0 bottom-0 w-[30px] md:w-[50px] h-[30px] md:h-[50px] bg-black z-10 flex items-center justify-center cursor-pointer hover:opacity-90"
           >
-              <BiArrowBack className="text-sm rotate-180 md:text-lg" />
+            <BiArrowBack className="text-sm rotate-180 md:text-lg" />
           </div>
-      )}
+        )}
       >
         <div>
           <img
